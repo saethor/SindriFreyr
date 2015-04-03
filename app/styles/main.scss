@@ -32,6 +32,7 @@ $youtube: #cc181e;
 $twitter: #326ada;
 $twitter-icon: #d4d8d4;
 $soundcloud: #ff3a00;
+$instagram: #517fa4;
 $envelope: #8B7765;
 
 // Mixin
@@ -109,7 +110,7 @@ body {
     }
     
     &.envelope:hover {
-      @include social-icon-hover-bg($envelope)
+      @include social-icon-hover-bg($instagram)
     }
        
   }
