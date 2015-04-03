@@ -1,0 +1,136 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+$main-background-image: "https://pbs.twimg.com/profile_images/501309236450979840/6eYn07V-_400x400.jpeg";
+
+$social-container-width: 700px;
+
+$heading: $gray-lighter;
+
+$icon-size: 70px;
+$icon-hover-size: $icon-size + 5px;
+$icon-font-size: 2em;
+$icon-color: #fff;
+$icon-bg-color: $gray-darker;
+$icon-hover-color: $gray-darker;
+// $icon-border: 1px solid $icon-color;
+
+// Icon hover colors
+$facebook: #3b5998;
+$facebook-icon: #dfe3ee;
+$youtube: #cc181e;
+$twitter: #326ada;
+$twitter-icon: #d4d8d4;
+$soundcloud: #ff3a00;
+$envelope: #8B7765;
+
+// Mixin
+@mixin social-icon-hover-bg($social-color, $color: #fff) {
+    background-color: $social-color;
+        border-color: $social-color;
+               color: $color;
+}
+
+body {
+  min-height: 100vh;
+  background: url($main-background-image) no-repeat center center fixed;
+  background-size: cover;
+  
+}
+
+.featured {
+    color: $heading;
+    text-align: center;
+    font-size: 3em;
+}
+
+.featured-video {
+    margin: 50px auto;
+    max-width: $social-container-width;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  max-width: $social-container-width;
+  margin: 20px auto;
+
+  .icon {
+    // border: $icon-border;
+    flex: 30px 30px $icon-hover-size;
+    align-self: flex-end;
+    border-radius: 50%;
+    height: $icon-size;
+    width: $icon-size;
+    
+    color: $icon-color;
+    text-align: center;
+    vertical-align: middle;
+    line-height: $icon-size;
+    font-size: $icon-font-size;
+    background-color: $icon-bg-color;
+    
+    transition: all 0.3s ease-in-out;
+
+
+    
+    &:hover {
+        transform: scale(1.1);
+        color: $icon-hover-color;
+        
+    }
+        
+    &.facebook:hover {
+      @include social-icon-hover-bg($facebook, $facebook-icon)
+    }
+    
+    &.youtube:hover {
+      @include social-icon-hover-bg($youtube)
+    }
+    
+    &.twitter:hover {
+      @include social-icon-hover-bg($twitter, $twitter-icon)
+    }
+    
+    &.soundcloud:hover {
+      @include social-icon-hover-bg($soundcloud)
+    }
+    
+    &.envelope:hover {
+      @include social-icon-hover-bg($envelope)
+    }
+       
+  }
+
+}
+
+.contact-form {
+    margin: 10px auto;
+    max-width: $social-container-width;
+
+    textarea {
+        min-height: 150px;
+        max-width: $social-container-width;
+    }
+}
+
+footer {
+    p {
+    color: #fff;
+
+    }
+}
+
+ 
