@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -28,7 +30,7 @@
         <![endif]-->
 
         <!-- Main navigation bar -->
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar--main">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -48,6 +50,10 @@
                         <li role="presentation" class="active"> 
                             <a href="#Home" aria-controls="Home" role="tab" data-toggle="tab">Home</a>
                         </li>
+
+                        <li role="presentation">
+                            <a href="#Listen" aria-controls="Listen" role="tab" data-toggle="tab">Listen</a>
+                        </li>
     
                         <li role="presentation"> 
                             <a href="#Bio" aria-controls="Bio" role="tab" data-toggle="tab">Bio</a>
@@ -61,8 +67,12 @@
         </nav>
 
         <div class="container">
-
-
+            
+            <!-- Logo -->
+            <div class="logo">
+                - Sindri Freyr -
+                <span>Music</span>
+            </div>
             <!-- Content -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="Home">
@@ -77,9 +87,24 @@
 
                 </div>
 
+                <div role="tabpanel" class="tab-pane listen--container" id="Listen">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/197929391&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                        </div>
+                </div>
+
                 <div role="tabpanel" class="tab-pane" id="Bio">
-                    <div class="panel panel-default">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, repudiandae sequi pariatur mollitia distinctio laboriosam facilis, culpa ipsa nulla dolor, voluptatem. Dolorum commodi dolore accusamus, expedita aperiam alias amet aliquid!
+                    <div class="bio--container">
+
+                        <div class="bio--avatar">
+                            <img src="images/avatar.jpg" alt="avatar">
+                        </div>
+                        
+                        <div class="bio--content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, repudiandae sequi pariatur mollitia distinctio laboriosam facilis, culpa ipsa nulla dolor, voluptatem. Dolorum commodi dolore accusamus, expedita aperiam alias amet aliquid!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam facilis doloribus perferendis eius, cum delectus ea, accusantium. Facere error blanditiis sapiente sint at architecto nihil delectus aspernatur quas maiores. Placeat.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero exercitationem debitis quos molestias, aut ut tempore fugiat aliquid maiores necessitatibus iste obcaecati, voluptatibus excepturi repellendus, culpa illo quis, doloremque quaerat.</p>
+                        </div>
                     </div>
                 </div>
 
