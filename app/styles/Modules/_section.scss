@@ -1,0 +1,11 @@
+section {
+  .section--title {
+    color: $navbar-bg;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+
+    border-bottom: 3px solid $navbar-active-bg;
+    margin-bottom: 20px;
+  }
+}

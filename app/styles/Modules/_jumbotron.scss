@@ -1,0 +1,18 @@
+.jumbotron {
+  height: 350px;
+  background: url($main-background-image) no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 185px;
+
+  .featured-video {
+    position: absolute;
+    width: $social-container-width;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin-left: -($social-container-width / 2);
+    z-index: 100;
+  }
+}

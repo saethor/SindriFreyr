@@ -185,8 +185,8 @@ td, th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
-  src: url('../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
+  src: url('bootstrap/glyphicons-halflings-regular.eot');
+  src: url('bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
 
 .glyphicon {
   position: relative;
@@ -4454,15 +4454,22 @@ button.close {
 
 body {
   min-height: 100vh;
-  background: url("https://pbs.twimg.com/profile_images/501309236450979840/6eYn07V-_400x400.jpeg") no-repeat center center fixed;
-  background-size: cover;
   font-size: 16px;
   font-family: 'Roboto', sans-serif; }
+
+section .section--title {
+  color: #a47c48;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 400;
+  border-bottom: 3px solid #816038;
+  margin-bottom: 20px; }
 
 .navbar--main {
   background-color: #a47c48;
   border-radius: 0;
-  border: none; }
+  border: none;
+  margin: 0; }
   .navbar--main .navbar-brand {
     color: #d7c797; }
     .navbar--main .navbar-brand:hover, .navbar--main .navbar-brand:focus {
@@ -4505,40 +4512,21 @@ body {
       color: #ccc;
       background-color: transparent; } }
 
-.logo {
-  font-size: 5em;
-  color: white;
-  text-align: center; }
-  .logo span {
-    display: block; }
-
-.featured {
-  color: #eeeeee;
-  text-align: center;
-  font-size: 3em; }
-
-.featured-video {
-  margin: 50px auto;
-  max-width: 700px; }
-
-.listen--container {
-  max-width: 700px;
-  margin: 20px auto; }
-
-.bio--container {
-  max-width: 700px;
-  margin: 20px auto;
-  background-color: pink;
-  padding: 10px; }
-
-.bio--avatar {
-  margin: 20px auto;
-  height: 200px;
-  width: 200px; }
-  .bio--avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; }
+.jumbotron {
+  height: 350px;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 185px; }
+  .jumbotron .featured-video {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin-left: -300px;
+    z-index: 100; }
 
 .social-icons {
   display: -webkit-flex;
@@ -4551,7 +4539,7 @@ body {
   align-content: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  max-width: 700px;
+  max-width: 600px;
   margin: 20px auto; }
   .social-icons .icon {
     -webkit-flex: 30px 30px 75px;
@@ -4566,7 +4554,7 @@ body {
     vertical-align: middle;
     line-height: 70px;
     font-size: 2em;
-    background-color: #222222;
+    background-color: #a47c48;
     transition: all 0.3s ease-in-out; }
     .social-icons .icon:hover {
       -webkit-transform: scale(1.1);
@@ -4593,12 +4581,52 @@ body {
       border-color: #517fa4;
       color: #fff; }
 
+.bio {
+  max-width: 600px;
+  margin: 50px auto; }
+  .bio--title {
+    color: #a47c48;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 400;
+    border-bottom: 3px solid #816038;
+    margin-bottom: 20px; }
+  .bio--avatar {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+    margin: 0 auto 20px; }
+    .bio--avatar .overlay {
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid #816038;
+      opacity: 0.6;
+      background-color: #d7c797;
+      width: 100%;
+      height: 100%; }
+    .bio--avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid #816038; }
+  .bio--content {
+    font-size: 1em; }
+
+.contact {
+  max-width: 600px;
+  margin: 50px auto; }
+
+.listen--container {
+  max-width: 600px;
+  margin: 20px auto; }
+
 .contact-form {
   margin: 10px auto;
-  max-width: 700px; }
+  max-width: 600px; }
   .contact-form textarea {
     min-height: 150px;
-    max-width: 700px; }
+    max-width: 600px; }
 
 footer p {
   color: #fff; }

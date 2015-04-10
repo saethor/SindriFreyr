@@ -1,4 +1,3 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
@@ -11,306 +10,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
     padding: 0.2em 0;
 }
 
-$primary-color: #a0786a;
-$secondary-color: #ffbb21;
-$foreground-color: #f9b461;
-$background-color: #e89d5c;
-$another-color: #8f513f;
 
-// Basics of a navbar
-$navbar-height:                    50px !default;
-$navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
-$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
-$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
-$navbar-collapse-max-height:       340px !default;
+@import 'Base/var';
+@import 'Base/base';
+@import 'Modules/section';
+@import 'Modules/navbar';
+@import 'Modules/jumbotron';
+@import 'Modules/social-icons';
+@import 'Modules/bio';
+@import 'Modules/contact';
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #e0bc81 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
-
-// Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
-
-// Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
-$navbar-default-brand-hover-bg:            transparent !default;
-
-// Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
-
-
-$main-background-image: "https://pbs.twimg.com/profile_images/501309236450979840/6eYn07V-_400x400.jpeg";
-
-$social-container-width: 700px;
-
-$heading: $gray-lighter;
-
-$icon-size: 70px;
-$icon-hover-size: $icon-size + 5px;
-$icon-font-size: 2em;
-$icon-color: #fff;
-$icon-bg-color: $gray-darker;
-$icon-hover-color: $gray-darker;
-// $icon-border: 1px solid $icon-color;
-
-// Icon hover colors
-$facebook: #3b5998;
-$facebook-icon: #dfe3ee;
-$youtube: #cc181e;
-$twitter: #326ada;
-$twitter-icon: #d4d8d4;
-$soundcloud: #ff3a00;
-$instagram: #517fa4;
-$envelope: #8B7765;
-
-// Mixin
-@mixin social-icon-hover-bg($social-color, $color: #fff) {
-    background-color: $social-color;
-        border-color: $social-color;
-               color: $color;
-}
-
-body {
-  min-height: 100vh;
-  background: url($main-background-image) no-repeat center center fixed;
-  background-size: cover;
-
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  
-}
-
-$navbar-color-1: #bbcbdb;
-$navbar-color-2: #9ebd9e;
-$navbar-color-3: #dd855c;
-$navbar-color-4: #f1e8ca;
-$navbar-color-5: #745151;
-
-$navbar-bg: #a47c48;
-$navbar-active-bg: darken($navbar-bg, 10%);
-$navbar-link-color: #d7c797;
-$navbar-active-link-color: darken($navbar-link-color, 10%);
-
-
-
-// Default navbar
-.navbar--main {
-  background-color: $navbar-bg;
-  border-radius: 0;
-  border: none;
-
-  .navbar-brand {
-    color: $navbar-link-color;
-    &:hover,
-    &:focus {
-      color: $navbar-default-brand-hover-color;
-      background-color: $navbar-default-brand-hover-bg;
-    }
-  }
-
-  .navbar-text {
-    color: $navbar-link-color;
-  }
-
-  .navbar-nav {
-    > li > a {
-      color: $navbar-link-color;
-
-      &:hover,
-      &:focus {
-        color: $navbar-active-link-color;
-        background-color: $navbar-default-link-hover-bg;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-active-link-color;
-        background-color: $navbar-active-bg;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-disabled-color;
-        background-color: $navbar-default-link-disabled-bg;
-      }
-    }
-  }
-
-  .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
-    }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $navbar-default-border;
-  }
-
-  // Dropdown menu items
-  .navbar-nav {
-    // Remove background color from open dropdown
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $navbar-default-link-active-bg;
-        color: $navbar-default-link-active-color;
-      }
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display when collapsed
-      .open .dropdown-menu {
-        > li > a {
-          color: $navbar-default-link-color;
-          &:hover,
-          &:focus {
-            color: $navbar-default-link-hover-color;
-            background-color: $navbar-default-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-default-link-active-color;
-            background-color: $navbar-default-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-default-link-disabled-color;
-            background-color: $navbar-default-link-disabled-bg;
-          }
-        }
-      }
-    }
-  }
-}
-
-.logo {
-  font-size: 5em;
-  color: white;
-  text-align: center;
-  span {
-    display: block;
-  }
-}
-
-.featured {
-    color: $heading;
-    text-align: center;
-    font-size: 3em;
-}
-
-.featured-video {
-    margin: 50px auto;
-    max-width: $social-container-width;
-}
 
 .listen--container {
   max-width: $social-container-width;
   margin: 20px auto;
-}
-
-.bio--container {
-  max-width: $social-container-width;
-  margin: 20px auto;
-  background-color: pink;
-  padding: 10px;
-}
-
-.bio--avatar {
-  margin: 20px auto;
-  height: 200px;
-  width: 200px;
-  
-
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
-}
-
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  max-width: $social-container-width;
-  margin: 20px auto;
-
-  .icon {
-    // border: $icon-border;
-    flex: 30px 30px $icon-hover-size;
-    align-self: flex-end;
-    border-radius: 50%;
-    height: $icon-size;
-    width: $icon-size;
-    
-    color: $icon-color;
-    text-align: center;
-    vertical-align: middle;
-    line-height: $icon-size;
-    font-size: $icon-font-size;
-    background-color: $icon-bg-color;
-    
-    transition: all 0.3s ease-in-out;
-
-
-    
-    &:hover {
-        transform: scale(1.1);
-        color: $icon-hover-color;
-        
-    }
-        
-    &.facebook:hover {
-      @include social-icon-hover-bg($facebook, $facebook-icon)
-    }
-    
-    &.youtube:hover {
-      @include social-icon-hover-bg($youtube)
-    }
-    
-    &.twitter:hover {
-      @include social-icon-hover-bg($twitter, $twitter-icon)
-    }
-    
-    &.soundcloud:hover {
-      @include social-icon-hover-bg($soundcloud)
-    }
-    
-    &.envelope:hover {
-      @include social-icon-hover-bg($instagram)
-    }
-       
-  }
-
 }
 
 .contact-form {
@@ -324,10 +37,9 @@ $navbar-active-link-color: darken($navbar-link-color, 10%);
 }
 
 footer {
-    p {
+  p {
     color: #fff;
-
-    }
+  }
 }
 
  

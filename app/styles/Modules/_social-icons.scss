@@ -1,0 +1,64 @@
+// Mixin
+@mixin social-icon-hover-bg($social-color, $color: #fff) {
+    background-color: $social-color;
+        border-color: $social-color;
+               color: $color;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  max-width: $social-container-width;
+  margin: 20px auto;
+
+  .icon {
+    // border: $icon-border;
+    flex: 30px 30px $icon-hover-size;
+    align-self: flex-end;
+    border-radius: 50%;
+    height: $icon-size;
+    width: $icon-size;
+    
+    color: $icon-color;
+    text-align: center;
+    vertical-align: middle;
+    line-height: $icon-size;
+    font-size: $icon-font-size;
+    background-color: $icon-bg-color;
+    
+    transition: all 0.3s ease-in-out;
+
+
+    
+    &:hover {
+        transform: scale(1.1);
+        color: $icon-hover-color;
+        
+    }
+        
+    &.facebook:hover {
+      @include social-icon-hover-bg($facebook, $facebook-icon)
+    }
+    
+    &.youtube:hover {
+      @include social-icon-hover-bg($youtube)
+    }
+    
+    &.twitter:hover {
+      @include social-icon-hover-bg($twitter, $twitter-icon)
+    }
+    
+    &.soundcloud:hover {
+      @include social-icon-hover-bg($soundcloud)
+    }
+    
+    &.envelope:hover {
+      @include social-icon-hover-bg($instagram)
+    }
+       
+  }
+
+}
