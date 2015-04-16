@@ -1,8 +1,16 @@
 .jumbotron {
-  height: 300px;
-  background: url($main-background-image) no-repeat center center fixed;
+  height: 400px;
+  background: {
+    image: url($main-background-image);
+    size: contain;
+    position: center center;
+    attachment: fixed;
+
+  }
   background-size: cover;
   position: relative;
+  margin: 0 auto;
+  
   margin-bottom: -175px;
 
   @media screen and (max-width: $screen-sm) {

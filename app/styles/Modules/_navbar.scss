@@ -9,7 +9,7 @@
     color: $navbar-link-color;
     &:hover,
     &:focus {
-      color: $navbar-default-brand-hover-color;
+      color: $navbar-active-link-color;
       background-color: $navbar-default-brand-hover-bg;
     }
   }

@@ -24,14 +24,14 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body id="/home">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Main navigation bar -->
-        <nav class="navbar navbar--main">
-            <div class="container">
+        <nav class="navbar navbar--main navbar-fixed-top">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#Home" aria-controles="home" role="tab" data-toggle="tab">
+                    <a class="navbar-brand" href="#/home" aria-controles="home" role="tab" data-toggle="tab">
                         Sindri Freyr
                     </a>
                 </div>
@@ -47,20 +47,20 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" role="tablist">
 
-                        <li role="presentation" class="active"> 
-                            <a href="#Home" aria-controls="Home" role="tab" data-toggle="tab">Home</a>
+                        <li class="active"> 
+                            <a href="#/home" aria-controls="Home">Home</a>
                         </li>
 
-                        <li role="presentation">
-                            <a href="#Listen" aria-controls="Listen" role="tab" data-toggle="tab">Listen</a>
+                        <li>
+                            <a href="#/listen" aria-controls="Listen">Listen</a>
                         </li>
     
-                        <li role="presentation"> 
-                            <a href="#Bio" aria-controls="Bio" role="tab" data-toggle="tab">Bio</a>
+                        <li> 
+                            <a href="#/bio" aria-controls="Bio">Bio</a>
                         </li>
 
-                        <li role="presentation"> 
-                            <a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab">Contact Me</a>
+                        <li> 
+                            <a href="#/contact" aria-controls="Contact">Contact Me</a>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
         </nav>
 
         <section class="jumbotron">
-            
+          
         </section>
         
         <div class="container">
@@ -84,7 +84,7 @@
             <!-- Social icons -->
             <section class="social-icons">
 
-                <a href="https://www.facebook.com/SindriFreyrGudjons" class="icon facebook">
+                <a href="https://www.facebook.com/SindriFreyrGudjons" class="icon facebook bump">
                     <i class="fa fa-facebook"></i>
                 </a>
 
@@ -106,7 +106,7 @@
 
             </section>
 
-            <section class="bio" id="#bio">
+            <section class="bio" id="/bio">
 
                 <h2 class="section--title">Bio</h2>
 
@@ -122,7 +122,7 @@
                 </div>
             </section>
 
-            <section class="listen--container" id="Listen">
+            <section class="listen--container" id="/listen">
 
                 <h2 class="section--title">Listen</h2>
 
@@ -131,7 +131,7 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact" id="/contact">
 
                 <h2 class="section--title">Contact Me</h2>
 
