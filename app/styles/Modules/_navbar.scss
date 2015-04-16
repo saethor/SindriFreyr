@@ -47,19 +47,21 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
+    border-color: $navbar-link-color;
+    border-radius: 0;
+    border: none;
     &:hover,
     &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
+      background-color: $navbar-active-bg;
     }
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: $navbar-active-link-color;
     }
   }
 
   .navbar-collapse,
   .navbar-form {
-    border-color: $navbar-default-border;
+    border-color: $navbar-link-color;
   }
 
   // Dropdown menu items

@@ -4457,6 +4457,9 @@ body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif; }
 
+.container {
+  max-width: 750px; }
+
 section .section--title {
   color: #a47c48;
   text-align: center;
@@ -4489,13 +4492,15 @@ section .section--title {
     color: #ccc;
     background-color: transparent; }
   .navbar--main .navbar-toggle {
-    border-color: #ddd; }
+    border-color: #d7c797;
+    border-radius: 0;
+    border: none; }
     .navbar--main .navbar-toggle:hover, .navbar--main .navbar-toggle:focus {
-      background-color: #ddd; }
+      background-color: #816038; }
     .navbar--main .navbar-toggle .icon-bar {
-      background-color: #888; }
+      background-color: #c9b372; }
   .navbar--main .navbar-collapse, .navbar--main .navbar-form {
-    border-color: #e7e7e7; }
+    border-color: #d7c797; }
   .navbar--main .navbar-nav > .open > a, .navbar--main .navbar-nav > .open > a:hover, .navbar--main .navbar-nav > .open > a:focus {
     background-color: #e7e7e7;
     color: #555; }
@@ -4513,20 +4518,21 @@ section .section--title {
       background-color: transparent; } }
 
 .jumbotron {
-  height: 350px;
+  height: 300px;
   background: url("../images/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
-  margin-bottom: 185px; }
-  .jumbotron .featured-video {
-    position: absolute;
-    width: 600px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    margin-left: -300px;
-    z-index: 100; }
+  margin-bottom: -175px; }
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      height: 200px;
+      margin-bottom: 10px; } }
+
+.featured-video {
+  margin: 0 auto;
+  padding: 20px;
+  height: auto;
+  z-index: 100; }
 
 .social-icons {
   display: -webkit-flex;
@@ -4539,8 +4545,8 @@ section .section--title {
   align-content: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  max-width: 600px;
-  margin: 20px auto; }
+  margin: 20px auto;
+  padding: 0 20px; }
   .social-icons .icon {
     -webkit-flex: 30px 30px 75px;
     flex: 30px 30px 75px;
@@ -4582,7 +4588,6 @@ section .section--title {
       color: #fff; }
 
 .bio {
-  max-width: 600px;
   margin: 50px auto; }
   .bio--title {
     color: #a47c48;
@@ -4614,19 +4619,30 @@ section .section--title {
     font-size: 1em; }
 
 .contact {
-  max-width: 600px;
   margin: 50px auto; }
+  .contact--form input, .contact--form textarea {
+    margin-top: 30px;
+    border: 2px solid #a47c48;
+    border-radius: 0; }
+    .contact--form input:focus, .contact--form textarea:focus {
+      border: 2px solid #816038;
+      box-shadow: none; }
+  .contact--form textarea {
+    min-height: 150px; }
+  .contact--form label {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #555555; }
+  .contact--form .active {
+    margin-top: -25px;
+    font-size: 0.9em;
+    margin-left: 0;
+    color: #333333;
+    transition: all 0.3s ease-in-out; }
 
 .listen--container {
-  max-width: 600px;
   margin: 20px auto; }
 
-.contact-form {
-  margin: 10px auto;
-  max-width: 600px; }
-  .contact-form textarea {
-    min-height: 150px;
-    max-width: 600px; }
-
 footer p {
-  color: #fff; }
+  color: #a47c48; }

@@ -16,29 +16,19 @@
 @import 'Modules/section';
 @import 'Modules/navbar';
 @import 'Modules/jumbotron';
+@import 'Modules/featured-video';
 @import 'Modules/social-icons';
 @import 'Modules/bio';
 @import 'Modules/contact';
 
 
 .listen--container {
-  max-width: $social-container-width;
   margin: 20px auto;
-}
-
-.contact-form {
-    margin: 10px auto;
-    max-width: $social-container-width;
-
-    textarea {
-        min-height: 150px;
-        max-width: $social-container-width;
-    }
 }
 
 footer {
   p {
-    color: #fff;
+    color: $primary-color;
   }
 }
 
