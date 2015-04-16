@@ -1,1 +1,1 @@
-console.log("'Allo 'Allo!");
+"use strict";$(function(){$(".contact input,textarea").focusin(function(){$(this).parent().find("label").addClass("active")}),$(".contact input,textarea").focusout(function(){var t=$(this).val();""===t&&$(this).parent().find("label").removeClass("active")})});
