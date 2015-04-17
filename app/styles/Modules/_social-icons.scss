@@ -28,13 +28,24 @@
     line-height: $icon-size;
     font-size: $icon-font-size;
     background-color: $icon-bg-color;
+    opacity: 0;
+    transform: translateX(-50px);
+    transform: rotate(-50deg);
     
     transition: all 0.3s ease-in-out;
+
+    &.show {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    &.bump {
+      transform: scale(1.1);
+    }
     
     &:hover {
         transform: scale(1.1);
-        color: $icon-hover-color;
-        
+        color: $icon-hover-color; 
     }
         
     &.facebook:hover {
@@ -53,7 +64,7 @@
       @include social-icon-hover-bg($soundcloud)
     }
     
-    &.envelope:hover {
+    &.instagram:hover {
       @include social-icon-hover-bg($instagram)
     }
        
