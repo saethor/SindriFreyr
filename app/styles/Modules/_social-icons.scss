@@ -7,7 +7,7 @@
 
 .social-icons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: center;
   align-content: center;
   justify-content: space-between;
@@ -16,8 +16,9 @@
 
   .icon {
     // border: $icon-border;
-    flex: 30px 30px $icon-hover-size;
+    flex: 80px 80px $icon-hover-size;
     align-self: flex-end;
+    flex-shrink: 2;
     border-radius: 50%;
     height: $icon-size;
     width: $icon-size;
@@ -39,10 +40,6 @@
       opacity: 1;
     }
 
-    &.bump {
-      transform: scale(1.1);
-    }
-    
     &:hover {
         transform: scale(1.1);
         color: $icon-hover-color; 
@@ -68,6 +65,15 @@
       @include social-icon-hover-bg($instagram)
     }
        
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    .icon {
+      height: $icon-size / 1.5;
+      width: $icon-size / 1.5;
+      font-size: 1.5em;
+      line-height: $icon-size / 1.5;
+    }
   }
 
 }

@@ -4546,8 +4546,8 @@ section .section--title {
 .social-icons {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
   -webkit-align-items: center;
   align-items: center;
   -webkit-align-content: center;
@@ -4557,10 +4557,12 @@ section .section--title {
   margin: 20px auto;
   padding: 0 20px; }
   .social-icons .icon {
-    -webkit-flex: 30px 30px 75px;
-    flex: 30px 30px 75px;
+    -webkit-flex: 80px 80px 75px;
+    flex: 80px 80px 75px;
     -webkit-align-self: flex-end;
     align-self: flex-end;
+    -webkit-flex-shrink: 2;
+    flex-shrink: 2;
     border-radius: 50%;
     height: 70px;
     width: 70px;
@@ -4580,9 +4582,6 @@ section .section--title {
       -webkit-transform: translateX(0px);
       transform: translateX(0px);
       opacity: 1; }
-    .social-icons .icon.bump {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1); }
     .social-icons .icon:hover {
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
@@ -4607,6 +4606,12 @@ section .section--title {
       background-color: #517fa4;
       border-color: #517fa4;
       color: #fff; }
+  @media screen and (max-width: 768px) {
+    .social-icons .icon {
+      height: 46.66667px;
+      width: 46.66667px;
+      font-size: 1.5em;
+      line-height: 46.66667px; } }
 
 .bio {
   margin: 50px auto;
@@ -4620,8 +4625,8 @@ section .section--title {
     margin-bottom: 20px; }
   .bio--avatar {
     position: relative;
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
     z-index: 1;
     margin: 0 auto 20px; }
     .bio--avatar .overlay {

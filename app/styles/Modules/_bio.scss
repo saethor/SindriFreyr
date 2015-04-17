@@ -15,8 +15,8 @@
 
   &--avatar {
     position: relative;
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
     z-index: 1;
     margin: 0 auto 20px;
 
