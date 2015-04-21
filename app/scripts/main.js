@@ -49,10 +49,10 @@ $(function() {
       offset: {
         top: 100,
         bottom: function () {
-          return (this.bottom = $('.footer').outerHeight(true))
+          return (this.bottom = $('.footer').outerHeight(true));
         }
       }
-})
+});
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
