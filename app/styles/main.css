@@ -4538,7 +4538,7 @@ section .section--title {
 
 .jumbotron {
   height: 400px;
-  background-image: url("../images/bg_black_white.jpg");
+  background-image: url("../images/bg_gray.jpg");
   background-size: contain;
   background-position: center center;
   background-attachment: fixed;
