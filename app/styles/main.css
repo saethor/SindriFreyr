@@ -4467,7 +4467,7 @@ section .section--title {
   text-align: left;
   font-size: 3em;
   font-weight: 400;
-  padding-top: 60px;
+  padding-top: 40px;
   border-bottom: 3px solid #8f989b;
   margin-bottom: 20px; }
 
@@ -4637,14 +4637,6 @@ section .section--title {
       width: 46.66667px;
       font-size: 1.5em;
       line-height: 46.66667px; } }
-  @media screen and (max-width: 900px) {
-    .social-icons {
-      position: static;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      margin: 0 auto;
-      right: 0;
-      left: 0; } }
   @media screen and (max-width: 1130px) {
     .social-icons.affix {
       right: 50px;
@@ -4655,6 +4647,20 @@ section .section--title {
       right: 10px;
       top: 100px;
       margin: 0; } }
+  @media screen and (max-width: 900px) {
+    .social-icons {
+      position: static;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      margin: 0 auto;
+      right: 0;
+      left: 0; }
+      .social-icons.affix {
+        position: fixed;
+        z-index: 1000;
+        bottom: 10px;
+        right: 0;
+        left: 0; } }
 
 .bio {
   margin: 50px auto;
