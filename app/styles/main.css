@@ -4491,7 +4491,9 @@ section .section--title {
   .navbar--main.scroll {
     background-color: #747f83; }
   .navbar--main .navbar-brand {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: 'Gruppo', cursive; }
     .navbar--main .navbar-brand:hover, .navbar--main .navbar-brand:focus {
       color: #e6e6e6;
       background-color: transparent; }

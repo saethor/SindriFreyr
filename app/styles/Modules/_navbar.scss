@@ -17,6 +17,8 @@
 
   .navbar-brand {
     color: $navbar-link-color;
+    font-size: 1.5em;
+    font-family: 'Gruppo', cursive;
     &:hover,
     &:focus {
       color: $navbar-active-link-color;
