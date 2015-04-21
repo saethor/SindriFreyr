@@ -1,9 +1,19 @@
 // Default navbar
+
+
+.navbar--container {
+  @include container-fixed() 
+}
 .navbar--main {
-  background-color: $navbar-bg;
+  transition: all 0.3s ease;
+  background-color: transparent;//$navbar-bg;
   border-radius: 0;
   border: none;
   margin: 0;
+
+  &.scroll {
+    background-color: $primary-color;
+  }
 
   .navbar-brand {
     color: $navbar-link-color;
@@ -24,16 +34,18 @@
 
       &:hover,
       &:focus {
-        color: $navbar-active-link-color;
+        // color: $navbar-active-link-color;
         background-color: $navbar-default-link-hover-bg;
+        border-bottom: 2px solid $secondary-color;
       }
     }
     > .active > a {
       &,
       &:hover,
       &:focus {
-        color: $navbar-active-link-color;
-        background-color: $navbar-active-bg;
+        //color: $navbar-active-link-color;
+        //background-color: $navbar-active-bg;
+        border-bottom: 2px solid $secondary-color;
       }
     }
     > .disabled > a {
@@ -61,7 +73,12 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: $navbar-link-color;
+    border-color: $secondary-color;
+    @media screen and (max-width: $screen-sm) {
+      background-color: $primary-color;
+
+    }
+    //background-color: $primary-color;
   }
 
   // Dropdown menu items

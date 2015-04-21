@@ -1,13 +1,13 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 
-$primary-color: #a47c48;
-$secondary-color: #bbcbdb;
-$background-color: darken($primary-color, 10%);
+$primary-color: #747f83;
+$secondary-color: #ffffff;
+$background-color: lighten($primary-color, 10%);
 $another-color: #8f513f;
 
 
-$main-background-image: "../images/bg.jpg";
+$main-background-image: "../images/bg_black_white.jpg";
 
 $social-container-width: 600px;
 
@@ -36,8 +36,8 @@ $navbar-color-4: #f1e8ca;
 $navbar-color-5: #745151;
 
 $navbar-bg: $primary-color;
-$navbar-active-bg: darken($navbar-bg, 10%);
-$navbar-link-color: #d7c797;
+$navbar-active-bg: $background-color;
+$navbar-link-color: $secondary-color;
 $navbar-active-link-color: darken($navbar-link-color, 10%);
 
 $icon-size: 70px;

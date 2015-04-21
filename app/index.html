@@ -31,7 +31,7 @@
 
         <!-- Main navigation bar -->
         <nav class="navbar navbar--main navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="navbar--container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -67,7 +67,11 @@
             </div>
         </nav>
 
-        <section class="jumbotron" id="jumbotron">
+        <section class="jumbotron" id="jumbotron"
+            data-center="background-position: 50% 0px;"
+            data-top-bottom="background-position: 50% -100px;"
+            data-anchor-target="#jumbotron"
+        >
           
         </section>
         
@@ -82,25 +86,25 @@
 
 
             <!-- Social icons -->
-            <section class="social-icons">
+            <section class="social-icons" data-spy="affix" data-offset-top="170" data-offset-bottom="0">
 
-                <a href="https://www.facebook.com/SindriFreyrGudjons" class="icon facebook bump">
+                <a href="https://www.facebook.com/SindriFreyrGudjons" class="icon facebook" data-toggle="tooltip" data-placement="right" title="Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
 
-                <a href="https://instagram.com/sindrifreyr/" class="icon instagram bump">
+                <a href="https://instagram.com/sindrifreyr/" class="icon instagram" data-toggle="tooltip" data-placement="right" title="Instagram">
                     <i class="fa fa-instagram"></i>
                 </a>
 
-                <a href="https://www.youtube.com/user/SindriFreyrGudjons" class="icon youtube">
+                <a href="https://www.youtube.com/user/SindriFreyrGudjons" class="icon youtube" data-toggle="tooltip" data-placement="right" title="Youtube">
                     <i class="fa fa-youtube"></i>
                 </a>
 
-                <a href="https://twitter.com/sindrifg" class="icon twitter">
+                <a href="https://twitter.com/sindrifg" class="icon twitter" data-toggle="tooltip" data-placement="right" title="Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
 
-                <a href="https://soundcloud.com/sindrifreyr" class="icon soundcloud">
+                <a href="https://soundcloud.com/sindrifreyr" class="icon soundcloud" data-toggle="tooltip" data-placement="right" title="SoundCloud">
                     <i class="fa fa-soundcloud"></i>
                 </a>
 
@@ -172,6 +176,12 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
+        <script type="text/javascript" src="skrollr.min.js"></script>
+
+        <script type="text/javascript">
+        var s = skrollr.init();
+        </script>
+
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -179,6 +189,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/skrollr/dist/skrollr.js"></script>
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
