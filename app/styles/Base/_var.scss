@@ -4,8 +4,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 $primary-color: #747f83;
 $secondary-color: #ffffff;
 $background-color: lighten($primary-color, 10%);
-$another-color: #8f513f;
-
 
 $main-background-image: "../images/bg_gray.jpg";
 
@@ -14,8 +12,6 @@ $social-container-width: 600px;
 $container-width: 600px;
 
 $heading: $gray-lighter;
-
-// $icon-border: 1px solid $icon-color;
 
 // Icon hover colors
 $facebook: #3b5998;
@@ -26,14 +22,6 @@ $twitter-icon: #d4d8d4;
 $soundcloud: #ff3a00;
 $instagram: #517fa4;
 $envelope: #8B7765;
-
-
-
-$navbar-color-1: #bbcbdb;
-$navbar-color-2: #9ebd9e;
-$navbar-color-3: #dd855c;
-$navbar-color-4: #f1e8ca;
-$navbar-color-5: #745151;
 
 $navbar-bg: $primary-color;
 $navbar-active-bg: $background-color;

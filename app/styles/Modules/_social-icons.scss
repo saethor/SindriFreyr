@@ -29,9 +29,9 @@
     align-self: flex-end;
     flex-shrink: 2;
     border-radius: 50%;
+    
     height: $icon-size;
     width: $icon-size;
-
     margin: 5px;
     
     color: $icon-color;
@@ -39,8 +39,10 @@
     vertical-align: middle;
     line-height: $icon-size;
     font-size: $icon-font-size;
+    
     background-color: $icon-bg-color;
     opacity: 0;
+    
     transform: translateX(-50px);
     transform: rotate(-50deg);
     
@@ -74,8 +76,7 @@
     
     &.instagram:hover {
       @include social-icon-hover-bg($instagram)
-    }
-       
+    }   
   }
 
   @media screen and (max-width: $screen-sm) {
@@ -86,37 +87,33 @@
       line-height: $icon-size / 1.5;
     }
   }
-  @media screen and (max-width: 1130px) {
+  @media screen and (max-width: 1160px) {
     &.affix {
       right: 50px;
-      top:100px;
-      margin: 0;
     }  
   }
+
   @media screen and (max-width: 1130px) {
     &.affix {
-      right: 10px;
-      top:100px;
-      margin: 0;
+      right: 0px;
+
     }  
   }
 
-  @media screen and (max-width: 900px) {
-      position: static;
-      flex-direction: row;
-      margin: 0 auto;
+  @media screen and (max-width: 930px) {
+    position: static;
+    flex-direction: row;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+
+    &.affix {
+      position: fixed;
+      z-index: 10;
+      top: 90%;
       right: 0;
       left: 0;
-
-      &.affix {
-        position: fixed;
-        z-index: 1000;
-        bottom:10px;
-        right: 0;
-        left: 0;
-      }
+      height: 40px;
+    }
   }
-
-  
-
 }
