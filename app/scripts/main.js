@@ -20,6 +20,10 @@ $('.nav a').click(function() {
     $(this).parent().addClass('active');
 });
 
+$('.navbar--main .navbar-toggle').click(function(event) {
+    $('.navbar--main').addClass('scroll');
+});
+
 // Social-icons landing effect
 $('.social-icons a').each(function(i) {
     setTimeout(function(){

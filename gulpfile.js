@@ -30,7 +30,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
-    return gulp.src('app/*.html')
+    return gulp.src('app/*.php')
         .pipe($.useref.assets())
         .pipe(jsFilter)
         .pipe($.uglify())
